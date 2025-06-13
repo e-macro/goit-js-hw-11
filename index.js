@@ -21,5 +21,5 @@ import{a as p,S as f,i as n}from"./assets/vendor-CrlV4O_2.js";(function(){const 
                 <span class="value">${d}</span>
             </div>
         </div>
-    </li>`).join("");c.innerHTML=s,g.refresh()}function y(){c.innerHTML=""}function v(){l.classList.remove("hidden")}function L(){l.classList.add("hidden")}const b=document.querySelector(".form");document.querySelector(".gallery");b.addEventListener("submit",r=>{r.preventDefault();const s=r.target.elements["search-text"].value;y(),v(),m(s).then(a=>{if(!a.hits.length){n.error({message:"Sorry, there are no images matching your search query. Please try again!",closeOnClick:!0,position:"topRight"});return}h(a.hits)}).catch(a=>n.error({message:`${a}`})).finally(()=>L())});
+    </li>`).join("");c.innerHTML=s,g.refresh()}function y(){c.innerHTML=""}function v(){l.classList.remove("hidden")}function L(){l.classList.add("hidden")}const b=document.querySelector(".form");b.addEventListener("submit",r=>{r.preventDefault();const s=r.target.elements["search-text"].value;y(),v(),m(s).then(a=>{if(!a.hits.length){n.error({message:"Sorry, there are no images matching your search query. Please try again!",closeOnClick:!0,position:"topRight"});return}h(a.hits)}).catch(a=>n.error({message:`${a}`})).finally(()=>L())});
 //# sourceMappingURL=index.js.map
