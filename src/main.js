@@ -1,4 +1,4 @@
-import findImages from "./js/pixabay-api";
+import getImagesByQuery from "./js/pixabay-api";
 import createGallery, { clearGallery, showLoader, hideLoader } from "./js/render-functions";
 import iziToast from "izitoast";
 // Додатковий імпорт стилів
@@ -12,7 +12,7 @@ form.addEventListener('submit', (event) => {
     const q = event.target.elements['search-text'].value;
     clearGallery()
     showLoader()
-    findImages(q)
+    getImagesByQuery(q)
         .then(response => {
             if (!response.hits.length) {
                 iziToast.error({
