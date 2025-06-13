@@ -8,9 +8,9 @@ const params = new URLSearchParams({
     q: query,
     image_type: "photo",
     orientation: "horizontal",
-    safesearch: true,
+    safesearch: "true",
 });
 
-return axios.get(`https://pixabay.com/api`, params)
+return axios.get(`https://pixabay.com/api`, { params })
         .then(response => response.data);
 }
