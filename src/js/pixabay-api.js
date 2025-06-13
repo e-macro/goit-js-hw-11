@@ -11,6 +11,6 @@ const params = new URLSearchParams({
     safesearch: true, 
 });
 
-return axios.get(`https://pixabay.com/api`, { params })
+return axios.get(`https://pixabay.com/api?${params}`)
         .then(response => response.data);
 }
