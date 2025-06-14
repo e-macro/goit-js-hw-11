@@ -7,9 +7,17 @@ import "izitoast/dist/css/iziToast.min.css";
 const form = document.querySelector(".form");
 
 form.addEventListener('submit', (event) => {
-    
     event.preventDefault();
-    const q = event.target.elements['search-text'].value;
+    const q = event.target.elements['search-text'].value.trim();
+    if (q === "") {
+        iziToast.error({
+                    message: "Please, fill in the field!",
+                    closeOnClick: true,
+                    position: "topRight",
+                });
+        
+        return;
+    }
     clearGallery()
     showLoader()
     getImagesByQuery(q)
